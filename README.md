@@ -25,7 +25,7 @@ Repository for hosting the CSC251 Programming Project.
 *     al_ arraylist of
 *
 * Prefixes can be combined in logical ways, such as:
-*     m_al_bBlockState class member, arraylist of booleans, named BlockState
+*     "m_al_bBlockState" class member, arraylist of booleans, named BlockState
 *
 * https://en.wikipedia.org/wiki/Hungarian_notation
 */
