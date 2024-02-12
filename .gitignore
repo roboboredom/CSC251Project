@@ -1,7 +1,3 @@
 # Java:
 # Compiled class file
 *.class
-
-# Visual Studio Code:
-# Workspace configuration files
-.vscode/

@@ -1,0 +1,16 @@
+{
+    /* VSCode extensions that the IDE will recommend if this workspace is opened without them installed. */
+    "recommendations": 
+    [
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-pack",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "redhat.java",
+        "cseitel.open-in-npp",
+        "vscjava.vscode-java-dependency",
+        "tomoki1207.pdf",
+        "leonardssh.vscord",
+        "nilssoderman.batch-runner"
+    ]
+}

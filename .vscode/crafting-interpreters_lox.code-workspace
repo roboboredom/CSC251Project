@@ -1,0 +1,70 @@
+{
+	/* Folders to include in the workspace. */
+	"folders": 
+	[
+		{
+			"path": ".."
+		}
+	],
+
+	/* Global workspace settings.
+	   Any folders that contain a `settings.json` 
+	   file in a `.vscode` folder will override the global 
+	   workspace settings set below under `"settings": {}`. */
+	"settings": 
+	{
+		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+		"editor.copyWithSyntaxHighlighting": false,
+		"editor.renderWhitespace": "all",
+		
+		"explorer.confirmDelete": false,
+
+		"files.autoSave": "off",
+		"files.exclude": 
+		{
+			"**/.DS_Store": false,
+			"**/.git": false,
+			"**/.hg": false,
+			"**/.svn": false,
+			"**/CVS": false,
+			"**/Thumbs.db": false
+		},
+
+		"git.ignoreMissingGitWarning": true,
+
+		"java.format.settings.url": ".vscode/java-formatter.xml",
+		"java.project.sourcePaths": 
+		[
+			"./src"
+		],
+		"java.project.outputPath": "./bin",
+		"java.project.referencedLibraries": 
+		[
+			"lib/**/*.jar"
+		],
+		"java.project.explorer.showNonJavaResources": true,
+		"java.project.resourceFilters": 
+		[
+			"\\.git",
+			"\\.vscode",
+			"\\.gitattributes",
+			"\\.gitignore",
+			"\\.LICENSE.txt",
+			"\\.README.md"
+		],
+
+		"openInNpp.decoupledExecution": true,
+		"openInNpp.extendEditorContextMenu": true,
+		"openInNpp.extendExplorerContextMenu": true,
+		"openInNpp.openFolderAsWorkspace": true,
+		"openInNpp.preserveCursorPosition": true,
+
+		"redhat.telemetry.enabled": false,
+
+		/* This setting can only be set at the user scope, in "C:\Users\<username>\AppData\Roaming\Code\User\settings.json".
+		   However, I am putting it here redundantly to let you know that it is something you can turn off there for privacy. */
+		"telemetry.telemetryLevel": "off",
+		
+		"vscord.app.name": "Visual Studio Code"
+	}
+}
