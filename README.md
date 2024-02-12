@@ -23,7 +23,10 @@ Repository for hosting the CSC251 Programming Project.
 *     o   class instance (object)
 *     a_  array of
 *     al_ arraylist of
-* 
+*
+* Prefixes can be combined in logical ways, such as:
+*     m_al_bBlockState class member, arraylist of booleans, named BlockState
+*
 * https://en.wikipedia.org/wiki/Hungarian_notation
 */
 ```
