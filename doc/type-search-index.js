@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.github.roboboredom.CSC251Project","l":"CPolicy"},{"p":"com.github.roboboredom.CSC251Project","l":"CPolicy.m_ESmokingStatus"},{"p":"com.github.roboboredom.CSC251Project","l":"Project_willem_gray"}];updateSearchResults();
