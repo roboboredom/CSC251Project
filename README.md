@@ -1,7 +1,6 @@
 # CSC251Project
 Repository for hosting the CSC251 Programming Project.
 
-# Note to the teacher:
 ```
 /* 
 * This project uses the following naming convention ontop of the teacher required one: 
