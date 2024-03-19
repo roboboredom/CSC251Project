@@ -6,7 +6,7 @@ package com.github.roboboredom.CSC251Project;
  *     <li>An instance of this class holds an insurance policy for one person
  *     </li>
  * </ul>
- * 
+ *
  * @author Willem Dawson Gray
  */
 public class CPolicy
@@ -31,13 +31,13 @@ public class CPolicy
 
 
     /** Available policy holder smoking statuses */
-    public enum m_ESmokingStatus 
-    { 
+    public enum m_ESmokingStatus
+    {
         /** The policy holder smokes */
-        SMOKER, 
-        
+        SMOKER,
+
         /** The policy holder doesn't smoke */
-        NON_SMOKER 
+        NON_SMOKER
     }
 
 
@@ -119,8 +119,8 @@ public class CPolicy
         m_dPolicyHolderHeightInches = dPolicyHolderHeightInches;
         m_dPolicyHolderWeightPounds = dPolicyHolderWeightPounds;
     }
-    
-    
+
+
     /** Sets the ID of the insurance policy.
      * @param iPolicyNumber ID of the insurance policy
      */
@@ -203,15 +203,15 @@ public class CPolicy
     public double fGetPolicyHolderWeightPounds() { return m_dPolicyHolderWeightPounds; }
 
 
-    /** 
+    /**
      * Calculates the policy holder's BMI.
      * <ul>
-     *     <li>The formula is 
+     *     <li>The formula is
      *         <pre><code>m_dPolicyHolderWeightPounds * 703.0D / Math.pow(m_dPolicyHolderHeightInches, 2.0D)
      *         </code></pre>
      *     </li>
      * </ul>
-     * 
+     *
      * @return The BMI of the policy holder
      */
     public double fCalculatePolicyHolderBMI()
@@ -220,7 +220,7 @@ public class CPolicy
         return m_dPolicyHolderWeightPounds * 703.0D / Math.pow(m_dPolicyHolderHeightInches, 2.0D);
     }
 
-    /** 
+    /**
      * Calculates the policy holder's insurance policy price.
      * <ul>
      *     <li>The base fee is {@link #F_dINSURANCE_POLICY_BASE_FEE}
@@ -234,7 +234,7 @@ public class CPolicy
      *         </code></pre>
      *     </li>
      * </ul>
-     * 
+     *
      * @return The the policy holder's insurance policy price
      */
     public double fCalculateInsurancePolicyPrice()
@@ -256,7 +256,7 @@ public class CPolicy
 
         /* Calculate and add the BMI fee if the policy holder's BMI is greater than the BMI fee threshold */
         double dPolicyHolderBMI = fCalculatePolicyHolderBMI();
-        if (dPolicyHolderBMI > F_dINSURANCE_POLICY_BMI_FEE_THRESHOLD) 
+        if (dPolicyHolderBMI > F_dINSURANCE_POLICY_BMI_FEE_THRESHOLD)
         {
             dInsurancePolicyPrice += (dPolicyHolderBMI - F_dINSURANCE_POLICY_BMI_FEE_THRESHOLD) * F_dINSURANCE_POLICY_BMI_FEE_MULTIPLIER;
         }
