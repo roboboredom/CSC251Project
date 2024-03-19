@@ -75,9 +75,9 @@ public class CPolicy
     public CPolicy()
     {
         m_iPolicyNumber = 0;
-        m_sProviderName = "Default Provider";
-        m_sPolicyHolderFirstName = "Default First Name";
-        m_sPolicyHolderLastName = "Default Last Name";
+        m_sProviderName = "";
+        m_sPolicyHolderFirstName = "";
+        m_sPolicyHolderLastName = "";
         m_iPolicyHolderAge = 0;
         m_ePolicyHolderSmokingStatus = m_ESmokingStatus.NON_SMOKER;
         m_dPolicyHolderHeightInches = 0.0D;

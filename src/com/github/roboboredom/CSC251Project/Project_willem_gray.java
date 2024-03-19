@@ -1,4 +1,4 @@
-/* 
+/*
 * This project uses the following naming convention ontop of the teacher required one: 
 * An old convention called hungarian notation.
 * It is considered outdated by some because most modern IDEs display type directly,
@@ -24,8 +24,9 @@
 * Prefixes can be combined in logical ways, such as:
 *     "m_al_bBlockState" class member, arraylist of booleans, named BlockState
 *
-* Basically, I like it because it makes the code just verbose enough to be easier for me to read quickly, without doing something crazy like:
-*     "ClassName_ArrayListOfBool_BlockState" or just relying on the IDE (which may or may not support type display
+* Basically, I like it because it makes the code just verbose enough to be easier for me to read quickly, 
+* without doing something crazy like: "ClassName_ArrayListOfBool_BlockState" or just relying on the IDE,
+* (which may or may not support type display).
 *
 * https://en.wikipedia.org/wiki/Hungarian_notation
 */

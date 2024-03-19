@@ -1,3 +1,5 @@
+# Regex patterns for items to ignore when commiting to git:
+
 # Java:
 # Compiled class file
 *.class
