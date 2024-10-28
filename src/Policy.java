@@ -70,7 +70,7 @@ public class Policy
 
 
     /** Instantiate a new insurance policy object with defaults */
-    public CPolicy()
+    public Policy()
     {
         m_iPolicyNumber = 0;
         m_sProviderName = "Default Provider";
@@ -96,7 +96,7 @@ public class Policy
      * @param dPolicyHolderHeightInches Policy holder height, in inches
      * @param dPolicyHolderWeightPounds Policy holder weight, in pounds
      */
-    public CPolicy
+    public Policy
     (
         int iPolicyNumber,
         String sProviderName,
