@@ -1,3 +1,10 @@
+# =============== FOLDERS ===============
+bin/**
+classes/**
+doc/**
+temp/**
+
+# =============== LOOSE JAVA FILES ===============
 # Compiled class file
 *.class
 

@@ -12,16 +12,15 @@ import java.util.Scanner;
 public class Project_Willem_Gray
 {
     /** Program entrypoint. 
-     * @param a_sArgs Command line arguments to the program
+     * @param a_sArgs Command line arguments to the program.
     */
     public static void main(String[] a_sArgs)
     {
-        /* Initialize a scanner and also a new policy object */
+        /* Initialize a scanner and also a new policy object. */
         Scanner oScanner = new Scanner(System.in);
         Policy oPolicy = new Policy();
 
-        /* Prompt the user to enter the required policy data */
-        /* There is NO input santization here, but the project did not say it was required. */
+        /* Prompt the user to enter the required policy data. */
         System.out.print("Please enter the Policy Number: ");
         oPolicy.fSetPolicyNumber(oScanner.nextInt());
         oScanner.nextLine();
@@ -58,21 +57,13 @@ public class Project_Willem_Gray
         oPolicy.fSetPolicyHolderWeightPounds(oScanner.nextDouble());
         oScanner.nextLine();
 
-        /* Print out all the entered data */
+        /* Print out all the entered data. */
         System.out.println("\nPolicy Number: " + oPolicy.fGetPolicyNumber());
         System.out.println("Provider Name: " + oPolicy.fGetProviderName());
         System.out.println("Policyholder's First Name: " + oPolicy.fGetPolicyHolderFirstName());
         System.out.println("Policyholder's Last Name: " + oPolicy.fGetPolicyHolderLastName());
         System.out.println("Policyholder's Age: " + oPolicy.fGetPolicyHolderAge());
 
-        /* There is probably a better way of doing this, but this works okay. 
-         * I am talking about printing the name of the enum state. NOT if this should be a boolean.
-         * 
-         * This should be an enum, because the program may need to be extended to support other 
-         * smoking states later on, such as "ECIG_SMOKER, etc.", since this is insurance, and 
-         * different drug types that can be smoked have different risk factors that should
-         * affect the insurance policy cost 
-         */
         Policy.m_ESmokingStatus ePolicyHolderSmokingStatus = oPolicy.fGetPolicyHolderSmokingStatus();
         if (ePolicyHolderSmokingStatus == Policy.m_ESmokingStatus.NON_SMOKER)
         {
@@ -86,13 +77,11 @@ public class Project_Willem_Gray
         System.out.println("Policyholder's Height: " + String.format("%.1f", oPolicy.fGetPolicyHolderHeightInches()) + " inches");
         System.out.println("Policyholder's Weight: " + String.format("%.1f", oPolicy.fGetPolicyHolderWeightPounds()) + " pounds");
 
-        /* Run the needed calculations and print out the BMI and total insurance policy price */
+        /* Run the needed calculations and print out the BMI and total insurance policy price. */
         System.out.println("Policyholder's BMI: " + String.format("%.2f", oPolicy.fCalculatePolicyHolderBMI()));
         System.out.println("Policy Price: $" + String.format("%.2f", oPolicy.fCalculateInsurancePolicyPrice()));
 
-        /* Close the scanner to prevent a resource leak */
+        /* Close the scanner to prevent a resource leak. */
         oScanner.close();
-
-        /* This program could loop, but the teacher did not say to use a read-eval-print-loop (REPL) structure for this particular project */
     }
 }
