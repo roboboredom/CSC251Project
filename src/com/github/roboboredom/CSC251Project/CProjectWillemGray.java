@@ -9,12 +9,15 @@ import java.util.ArrayList;
     @author Willem Dawson Gray          */
 public class CProjectWillemGray
 {
+    /* ========================= FIELDS ========================= */
+    /** Number of policy objects created. */
+    private static int sm_iPolicyObjectsCreated;
+
+    /* ========================= METHODS ========================= */
     /** Program entrypoint.
         @param a_sArgs Command line arguments to the program. */
     public static void main(String[] a_sArgs)
     {
-        System.out.println("[DEBUG] CWD: " + System.getProperty("user.dir"));
-
         /* Initialize two int vars to count the number of policyholders that are smokers and that are non-smokers. */
         int iSmokers    = 0;
         int iNonSmokers = 0;
@@ -30,65 +33,60 @@ public class CProjectWillemGray
             /* Iterate through the file and populate the arraylist with policy objects constructed with the data in the file. */
             while(oScanner.hasNext())
             {
+                CPolicyHolder oPolicyHolder = new CPolicyHolder();
                 CPolicy oPolicy = new CPolicy();
 
                 /* Scan in the data in the file to the policy object. */
                 oPolicy.fSetPolicyNumber(Integer.parseInt(oScanner.nextLine()));
-
                 oPolicy.fSetProvider(oScanner.nextLine());
-                oPolicy.fSetFirstName(oScanner.nextLine());
-                oPolicy.fSetLastName(oScanner.nextLine());
-
-                oPolicy.fSetAge(Integer.parseInt(oScanner.nextLine()));
+                
+                oPolicyHolder.fSetFirstName(oScanner.nextLine());
+                oPolicyHolder.fSetLastName(oScanner.nextLine());
+                oPolicyHolder.fSetAge(Integer.parseInt(oScanner.nextLine()));
 
                 String sInput = oScanner.nextLine();
                 if (sInput.equals("smoker"))
                 {
-                    oPolicy.fSetSmokingStatus(CPolicy.m_ESmokingStatus.SMOKER);
+                    oPolicyHolder.fSetSmokingStatus(CPolicyHolder.m_ESmokingStatus.SMOKER);
+
+                    /* Increment the counter of policy holders that smoke. */
+                    iSmokers++;
                 }
                 else if (sInput.equals("non-smoker"))
                 {
-                    oPolicy.fSetSmokingStatus(CPolicy.m_ESmokingStatus.NON_SMOKER);
+                    oPolicyHolder.fSetSmokingStatus(CPolicyHolder.m_ESmokingStatus.NON_SMOKER);
+
+                    /* Increment the counter of policy holders that don't smoke. */
+                    iNonSmokers++;
                 }
 
-                oPolicy.fSetHeightInches(Double.parseDouble(oScanner.nextLine()));
-                oPolicy.fSetWeightPounds(Double.parseDouble(oScanner.nextLine()));
+                oPolicyHolder.fSetHeightInches(Double.parseDouble(oScanner.nextLine()));
+                oPolicyHolder.fSetWeightPounds(Double.parseDouble(oScanner.nextLine()));
+
+                oPolicy.fSetPolicyHolder(oPolicyHolder);
 
                 /* Consume the blank line exists after each policy object's data, if it exists. */
                 if (oScanner.hasNext()) { oScanner.nextLine(); }
 
                 /* Add the policy to the arraylist. */
                 al_oPolicies.add(oPolicy);
+
+                /* Increment the counter of created policy objects. */
+                sm_iPolicyObjectsCreated++;
             }
 
             /* Iterate through all the policy objects in the array and print the data for each. */
             for (CPolicy oPolicy : al_oPolicies)
             {
-                System.out.println("Policy Number: " + oPolicy.fGetPolicyNumber());
-                System.out.println("Provider Name: " + oPolicy.fGetProvider());
-                System.out.println("Policyholder's First Name: " + oPolicy.fGetFirstName());
-                System.out.println("Policyholder's Last Name: " + oPolicy.fGetLastName());
-                System.out.println("Policyholder's Age: " + oPolicy.fGetAge());
-
-                CPolicy.m_ESmokingStatus ePolicyHolderSmokingStatus = oPolicy.fGetSmokingStatus();
-                if (ePolicyHolderSmokingStatus == CPolicy.m_ESmokingStatus.NON_SMOKER)
-                {
-                    System.out.println("Policyholder's Smoking Status: non-smoker");
-                    iNonSmokers++; /* Increment total number of non-smokers */
-                }
-                else
-                {
-                    System.out.println("Policyholder's Smoking Status: smoker");
-                    iSmokers++; /* Increment total number of smokers. */
-                }
-
-                System.out.println("Policyholder's Height: " + String.format("%,.1f", oPolicy.fGetHeightInches()) + " inches");
-                System.out.println("Policyholder's Weight: " + String.format("%,.1f", oPolicy.fGetWeightPounds()) + " pounds");
-                System.out.println("Policyholder's BMI: " + String.format("%,.2f", oPolicy.fCalculateBMI()));
+                System.out.println(oPolicy);
+                System.out.println(oPolicy.fGetPolicyHolder());
                 System.out.println("Policy Price: $" + String.format("%,.2f", oPolicy.fCalculatePolicyPrice()) + "\n");
             }
 
-            /* Print the nnuber of policyholders that are smokers and the amount that are non-smokers. */
+            /* Print the number of policy objects created. */
+            System.out.println("There were " + sm_iPolicyObjectsCreated + " Policy objects created.");
+
+            /* Print the number of policyholders that are smokers and the amount that are non-smokers. */
             System.out.println("The number of policies with a smoker is: " + iSmokers);
             System.out.println("The number of policies with a non-smoker is: " + iNonSmokers);
 
