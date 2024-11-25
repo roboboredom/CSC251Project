@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CProjectWillemGray",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "com.github.roboboredom.CSC251Project.CProjectWillemGray",
+
+            /* jGrasp uses "classes" as the CWD, match this so jGrasp can run this project like VSCode. */
+            "cwd": "${workspaceFolder}/classes"
+        }
+    ]
+}

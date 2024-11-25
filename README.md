@@ -1,2 +1,2 @@
-# CSC251Project
- Repository for hosting the CSC251 Programming Project.
+### CSC251Project
+Repository for hosting the CSC251 Programming Project.

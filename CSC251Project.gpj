@@ -1,4 +1,4 @@
-!1733;s
+!1725;s
 J
 SAU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
 SCU0JGRASP_MAIN_BOUNDS=%<CONTROL_SHELL_BOUNDS>\012PATH+=%<JGRASP_PATHS>%;\012PATH=+%;%<JGRASP_C_PATHS>\012CYGWIN=nodosfilewarning\012GCC_COLORS=\012-Run\012ADD_EXE_PATH==Y\012
@@ -17,12 +17,9 @@ s#m0src
 s#n0classes
 s#p0doc
 s#s0res
-s#r0bin
-!84;u
-a1	b68	c255	f%\011CSC251Project.jar	g%\011CSC251Project.zip	hManifest-Version\0111.0!17;a
-a%\011doc	b	c1	d0!57;g
-%\011src%sProject_Willem_Gray.java
-%\011src%sPolicy.java
-!57;f
-%\011src%sProject_Willem_Gray.java
-%\011src%sPolicy.java
+!139;g
+%\011src%scom%sgithub%sroboboredom%sCSC251Project%sCPolicy.java
+%\011src%scom%sgithub%sroboboredom%sCSC251Project%sCProjectWillemGray.java
+!139;f
+%\011src%scom%sgithub%sroboboredom%sCSC251Project%sCPolicy.java
+%\011src%scom%sgithub%sroboboredom%sCSC251Project%sCProjectWillemGray.java
